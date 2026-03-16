@@ -15,8 +15,8 @@ int main() {
     char NomeDaCidade1[20] = "São Paulo";
     int  Populacao1 = 1200000;
     int NumeroDePontosTuristicos1 = 5;
-    float Area1 = 193.3;
-    float PIB1 = 45000000000.0;
+    float Area1 = 213.3;
+    double PIB1 = 45000000000.0;
     float DensidadePopulaional1 ;
     float PIBPerCapito1 ;
 
@@ -27,7 +27,7 @@ int main() {
     int  Populacao2 = 1200000;
     int NumeroDePontosTuristicos2 = 5;
     float Area2 = 193.3;
-    float PIB2 = 45000000000.0;
+    double PIB2 = 45000000000.0;
     float DensidadePopulaional2 ;
     float PIBPerCapito2 ;
 
@@ -37,11 +37,20 @@ int main() {
     char NomeDaCidade3[20] = "Belo Horizonte"; 
     int  Populacao3 = 1200000;
     int NumeroDePontosTuristicos3 = 5;
-    float Area3 = 193.3;
-    float PIB3 = 45000000000.0;
+    float Area3 = 389.3;
+    double PIB3 = 45000000000.0;
     float DensidadePopulaional3;
     float PIBPerCapito3;
-  
+
+    double ResultadoPopulacao;
+    int    ResultadoPontosTuristicos;
+    float  ResultadoArea;
+    double ResultadoPIB;
+    float  ResultadoDensidadePopulacional;
+    float  ResultadoPIBPerCapita;
+
+
+    
   // Área para entrada de dados'
     /*
     printf("Digite o nome da cart1: \n ");
@@ -64,6 +73,7 @@ int main() {
     // Cálculo da densidade populacional e PIB per capita para a cidade 1
     DensidadePopulaional1 = Populacao1 / Area1;
     PIBPerCapito1 = PIB1 / Populacao1;
+
 
   /*
     printf("Digite o nome da carta 2: \n");
@@ -108,8 +118,18 @@ int main() {
     DensidadePopulaional3 = Populacao3 / Area3; 
     PIBPerCapito3 = PIB3 / Populacao3;
 
+    //Área de comparação de atributos 
+
+    ResultadoDensidadePopulacional = Populacao1 > Populacao2;
+    ResultadoPontosTuristicos = NumeroDePontosTuristicos1 > NumeroDePontosTuristicos2;
+    ResultadoArea = Area1 > Area2;
+    ResultadoPIB = PIB1 > PIB2;
+    ResultadoDensidadePopulacional = DensidadePopulaional1 > DensidadePopulaional2;
+    ResultadoPIBPerCapita = PIBPerCapito1 > PIBPerCapito2;
+
   // Área para exibição dos dados da cidade
   
+  /*
   printf("Nome:%s \n",CartaA );
   printf("Estado:%s \n",Estado1);
   printf("Código da Carta:%s \n",CodigoDaCarta1);
@@ -142,6 +162,16 @@ int main() {
   printf("PIB:%f \n",PIB3);
   printf("Densidade Populacional:%f \n",DensidadePopulaional3);
   printf("PIB Per Capita:%f \n",PIBPerCapito3);   
+*/
+
+  printf("Resultado da coparação entre a carta A e a 2 e %d \n", ResultadoPopulacao);
+  printf("Resultado da comparação entre a cidade 1 e a 2 e %d \n", ResultadoPontosTuristicos);
+  printf("Resultado da comparação entre a cidade 1 e a 2 e %.0f \n", ResultadoArea);
+  printf("Resultado da comparação entre a cidade 1 e a 2 e %.0f \n", ResultadoPIB);
+  printf("Resultado da comparação entre a cidade 1 e a 2 e %.0f \n", ResultadoDensidadePopulacional);
+  printf("Resultado da comparação entre a cidade 1 e a 2 e %.0f \n", ResultadoPIBPerCapita);
+
+
 
 return 0;
 } 
